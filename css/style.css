@@ -1,0 +1,129 @@
+:root {
+  /* Fonts */
+  --main-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
+  /* Text colors */
+  --main-text-cl: #303030;
+  --light-text-cl: #ffffff;
+  --accent-text-cl: #ff6c00;
+  --grey-text-cl-60: rgba(157, 164, 189, 0.6);
+  --grey-text-cl: #9da4bd;
+
+  /* Background colors */
+  --mail-bg-cl: #ffffff;
+  --accent-bg-cl: #ff6c00;
+
+  /* Others */
+}
+
+.page {
+  font-family: var(--main-font);
+  background-color: var(--mail-bg-cl);
+  color: var(--main-text-cl);
+
+  line-height: calc(30 / 18);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+}
+
+/**
+  |============================
+  | Header
+  |============================
+*/
+
+.header {
+  background-color: #191c26;
+}
+
+.header .link {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: calc(16 / 12);
+
+  color: var(--light-text-cl);
+}
+
+.header .link:hover,
+.header .link:focus {
+  color: var(--accent-text-cl);
+}
+
+.header .header-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--light-text-cl);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/**
+  |============================
+  | Hero
+  |============================
+*/
+
+.hero {
+  background-color: #191c26;
+}
+
+.hero-social-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+}
+
+.hero-undertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  color: var(--grey-text-cl-60);
+}
+
+.hero-title {
+  font-family: var(--secondary-font);
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+
+  color: var(--light-text-cl);
+}
+
+.hero-subtitle {
+  color: var(--grey-text-cl);
+}
+
+.slider-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+
+  color: var(--grey-text-cl-60);
+  background-color: transparent;
+}
+
+.slider-btn.active {
+  color: var(--light-text-cl);
+}
