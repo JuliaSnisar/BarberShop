@@ -9,22 +9,25 @@
   --accent-text-cl: #ff6c00;
   --grey-text-cl-60: rgba(157, 164, 189, 0.6);
   --grey-text-cl: #9da4bd;
+  --dark-grey-tx-cl: #555555;
 
   /* Background colors */
-  --mail-bg-cl: #ffffff;
+  --main-bg-cl: #ffffff;
   --accent-bg-cl: #ff6c00;
 
   /* Others */
 }
 
-.page {
-  font-family: var(--main-font);
-  background-color: var(--mail-bg-cl);
-  color: var(--main-text-cl);
+/* RESET */
 
-  line-height: calc(30 / 18);
-  font-size: 18px;
-  letter-spacing: 0.02em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 .link {
@@ -34,8 +37,71 @@
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+img {
+  display: block;
+}
+
+/**
+  |============================
+  | BASE
+  |============================
+*/
+
+.page {
+  font-family: var(--main-font);
+  background-color: var(--main-bg-cl);
+  color: var(--main-text-cl);
+
+  line-height: calc(30 / 18);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.section-title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+
+.btn {
+  padding: 10px 16px;
+  width: 160px;
+  min-height: 40px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-bg-cl);
+}
+
+.uppertitle {
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
 /**
   |============================
   | Header
@@ -46,7 +112,9 @@
   background-color: #191c26;
 }
 
-.header .link {
+.header-link,
+.header-contact {
+  margin-right: 40px;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -60,17 +128,8 @@
   color: var(--accent-text-cl);
 }
 
-.header .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
+.header-btn {
   color: var(--light-text-cl);
-  background-color: transparent;
-  cursor: pointer;
 }
 
 /**
@@ -87,20 +146,20 @@
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
-  letter-spacing: 0.2em;
 }
 
-.hero-undertitle {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+.hero-social-link:hover,
+.hero-social-link:focus {
+  color: var(--accent-text-cl);
+}
 
+.hero .uppertitle {
   color: var(--grey-text-cl-60);
 }
 
 .hero-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 72px;
   line-height: calc(85 / 72);
@@ -126,4 +185,127 @@
 
 .slider-btn.active {
   color: var(--light-text-cl);
+}
+
+/**
+  |============================
+  | ABOUT US
+  |============================
+*/
+
+.about-group {
+  width: 470px;
+}
+
+.about-subtitle {
+  margin-bottom: 20px;
+  color: var(--dark-grey-tx-cl);
+}
+
+.about-text {
+  margin-bottom: 40px;
+  color: var(--dark-grey-tx-cl);
+  font-size: 14px;
+  line-height: calc(26 / 14);
+}
+
+/**
+  |============================
+  | SERVICES & PRICES
+  |============================
+*/
+
+.price {
+  background-color: #191c26;
+}
+
+.price .uppertitle {
+  color: var(--grey-text-cl-60);
+}
+
+.price > .section-title {
+  margin-bottom: 44px;
+  color: var(--light-text-cl);
+}
+
+.price-item {
+  color: var(--grey-text-cl);
+}
+
+.price-btn {
+  color: var(--light-text-cl);
+}
+
+/**
+  |============================
+  | BENEFITS
+  |============================
+*/
+
+.benefit-item {
+  width: 122px;
+}
+
+.plus {
+  color: var(--accent-text-cl);
+}
+
+.quantity {
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: calc(57 / 42);
+  letter-spacing: 0.05em;
+}
+
+.quantity-desc {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+}
+
+.benefit-group .section-title {
+  width: 420px;
+}
+
+.benefit-text {
+  width: 500px;
+  color: var(--dark-grey-tx-cl);
+}
+
+/**
+  |============================
+  | TEAM
+  |============================
+*/
+
+.team .section-title {
+  margin-bottom: 44px;
+}
+
+.team-name {
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 400;
+  line-height: calc(25 / 18);
+}
+
+.team-position {
+  margin-bottom: 30px;
+  color: var(--accent-text-cl);
+  text-align: center;
+  font-size: 14px;
+  line-height: calc(19 / 14);
+}
+
+/**
+  |============================
+  | GALLERY
+  |============================
+*/
+
+.gallery .uppertitle {
+  margin-bottom: 44px;
 }
