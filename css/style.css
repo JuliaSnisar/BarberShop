@@ -45,6 +45,11 @@ img {
   display: block;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .container {
   outline: 1px solid red;
   outline-offset: -2px;
@@ -79,6 +84,11 @@ img {
   font-weight: 700;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
+}
+
+.dark-title {
+  margin-bottom: 44px;
+  color: var(--light-text-cl);
 }
 
 .btn {
@@ -274,17 +284,31 @@ img {
   color: var(--grey-text-cl-60);
 }
 
-.price > .section-title {
+.price-group {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 44px;
-  color: var(--light-text-cl);
+}
+
+.price-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
 }
 
 .price-item {
   color: var(--grey-text-cl);
+  margin-bottom: 20px;
+}
+
+.price-item:last-child {
+  margin-bottom: 0;
 }
 
 .price-btn {
   color: var(--light-text-cl);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**
